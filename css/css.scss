@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+body {
+	font-family: "Ubuntu";
+	font-weight: bold;
+}
+/*layout*/
+.send {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	grid-row-gap: 10px;
+	column-gap: 10px;
+}
+.lifeTime {
+	grid-column: span 2;
+}
+.showLimit {
+	grid-column: span 2;
+}
+.logout {
+	justify-self: right;
+	align-self: right;
+}
+.delete {
+	grid-column: span 2;
+	align-self: stretch;
+	display: block;
+	justify-content: center;
+	align-content: center;
+}
+#textbox {
+	max-width: 200px;
+	margin-top: 13px;
+}
+#delete {
+	float: right;
+}
+.files {
+	max-width: 1520px;
+	margin: 0 auto;
+	padding: 10px;
+	display: grid;
+	row-gap: 10px;
+	column-gap: 10px;
+}
+#container {
+	min-width: 275px;
+	height: 70px;
+	border: solid white 1px;
+	border-radius: 4px;
+	display: grid;
+	grid-template-columns: 1fr 34px;
+	align-items: center;
+	justify-items: center;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+#container:hover {
+	border-color: #24fe41;
+}
+/*Responsive placement of containers*/
+@media (min-width: 600px) {
+	.files {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (min-width: 900px) {
+	.files {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (min-width: 1200px) {
+	.files {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+@media (min-width: 1500px) {
+	.files {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+/* Other */
+a {
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+}
+a:hover {
+	color: #24fe41;
+}
+#img {
+	width: 24px;
+	height: 24px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+body {
+	background: #1d1f20;
+	color: white;
+}
+/* Div Border & Anim*/
+
+/* Button Animation & Style*/
+.button {
+	width: 100px;
+	height: 50px;
+	color: white;
+	background-color: #1d1f20;
+	border: 2px solid #24fe41;
+	border-radius: 4px;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+}
+.button:hover {
+	background-color: #24fe41;
+	color: #1d1f20;
+	cursor: pointer;
+}
+/*Style only*/
+/*send*/
+.send {
+	border: 2px solid #24fe41;
+	border-radius: 4px;
+	width: 300px;
+	height: 305px;
+	padding: 20px;
+	margin: auto;
+	margin-bottom: 70px;
+}
+.lifeTime {
+	margin: auto;
+	// border: 2px solid #24fe41;
+	padding: 6px;
+	border-radius: 4px;
+	cursor: context-menu;
+}
+.showLimit {
+	margin: auto;
+	border: 2px solid #24fe41;
+	padding: 6px;
+	border-radius: 5px;
+}
+
+/* files */
+
+.files {
+	border: 2px solid #24fe41;
+	border-radius: 4px;
+}
+.uploadFile {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.uploadFile input[type="file"] {
+	font-size: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+#upload {
+	width: 100px;
+	height: 50px;
+	color: white;
+	background-color: #1d1f20;
+	border: 2px solid #24fe41;
+	border-radius: 4px;
+}
+input[type="text"] {
+	background-color: lighten(#1d1f20, 0%);
+	border: none;
+	border-bottom: 2px solid white;
+	border-radius: 1px;
+	color: white;
+	height: 20px;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+}
+input[type="text"]:focus,
+input[type="text"]:not(:placeholder-shown) {
+	border-bottom: 2px solid #24fe41;
+}
+
+/* ------ chat ------*/
+$msg-border-colour: lighten(#1d1f20, 30%);
+$msg-border-colour: #24fe41;
+
+.chat {
+	msg {
+		border: 3px solid $msg-border-colour;
+		display: block;
+		margin-bottom: 2em;
+		width: max-content;
+		border-radius: 1em;
+		padding: 1em;
+
+		hr {
+			border: 1px solid $msg-border-colour;
+			border-radius: 2px;
+		}
+
+		.msg {
+			display: block;
+			font-size: 1rem;
+			// outline: 1px solid purple;
+			padding: 2px;
+		}
+		h5 {
+			font-size: 1.3rem;
+			// outline: 1px solid red;
+			margin: 0;
+			padding: 2px;
+		}
+	}
+	form {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		textarea {
+			resize: none;
+			font-family: "Ubuntu";
+			color: white;
+			// height: auto;
+			border: 3px solid $msg-border-colour;
+			border-radius: 4px;
+			padding: 0.5em;
+			background-color: lighten(#1d1f20, 10%);
+		}
+	}
+}

@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+body {
+  font-family: "Ubuntu";
+  font-weight: bold;
+}
+
+/*layout*/
+.send {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.lifeTime {
+  grid-column: span 2;
+}
+
+.showLimit {
+  grid-column: span 2;
+}
+
+.logout {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-flex-item-align: right;
+      -ms-grid-row-align: right;
+      align-self: right;
+}
+
+.delete {
+  grid-column: span 2;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#textbox {
+  max-width: 200px;
+  margin-top: 13px;
+}
+
+#delete {
+  float: right;
+}
+
+.files {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+#container {
+  min-width: 275px;
+  height: 70px;
+  border: solid white 1px;
+  border-radius: 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 34px;
+      grid-template-columns: 1fr 34px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#container:hover {
+  border-color: #24fe41;
+}
+
+/*Responsive placement of containers*/
+@media (min-width: 600px) {
+  .files {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .files {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .files {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1500px) {
+  .files {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Other */
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #24fe41;
+}
+
+#img {
+  width: 24px;
+  height: 24px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body {
+  background: #1d1f20;
+  color: white;
+}
+
+/* Div Border & Anim*/
+/* Button Animation & Style*/
+.button {
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #1d1f20;
+  border: 2px solid #24fe41;
+  border-radius: 4px;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #24fe41;
+  color: #1d1f20;
+  cursor: pointer;
+}
+
+/*Style only*/
+/*send*/
+.send {
+  border: 2px solid #24fe41;
+  border-radius: 4px;
+  width: 300px;
+  height: 305px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.lifeTime {
+  margin: auto;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: context-menu;
+}
+
+.showLimit {
+  margin: auto;
+  border: 2px solid #24fe41;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* files */
+.files {
+  border: 2px solid #24fe41;
+  border-radius: 4px;
+}
+
+.uploadFile {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.uploadFile input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#upload {
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #1d1f20;
+  border: 2px solid #24fe41;
+  border-radius: 4px;
+}
+
+input[type="text"] {
+  background-color: #1d1f20;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 1px;
+  color: white;
+  height: 20px;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="text"]:not(:placeholder-shown) {
+  border-bottom: 2px solid #24fe41;
+}
+
+/* ------ chat ------*/
+.chat msg {
+  border: 3px solid #24fe41;
+  display: block;
+  margin-bottom: 2em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.chat msg hr {
+  border: 1px solid #24fe41;
+  border-radius: 2px;
+}
+
+.chat msg .msg {
+  display: block;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.chat msg h5 {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 2px;
+}
+
+.chat form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.chat form textarea {
+  resize: none;
+  font-family: "Ubuntu";
+  color: white;
+  border: 3px solid #24fe41;
+  border-radius: 4px;
+  padding: 0.5em;
+  background-color: #35393b;
+}
